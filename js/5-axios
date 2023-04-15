@@ -2,11 +2,11 @@ const api = "https://ucamp-api.onrender.com/api/v1/customers";
 
 const obtenerClientes = async () => {
   try {
-    const respuesta = await fetch(
+    const respuesta = await axios.get(
       "https://ucamp-api.onrender.com/api/v1/customers"
     );
-    const json = await respuesta.json();
-    console.log(json);
+    const datos = respuesta.data;
+    console.log(datos);
   } catch (error) {
     console.log(error);
   }
@@ -14,11 +14,8 @@ const obtenerClientes = async () => {
 
 const obtenerCliente = async () => {
   try {
-    const respuesta = await fetch(
-      "https://ucamp-api.onrender.com/api/v1/customers/643ab0727ff131d0b2870c63",
-      {
-        method: "GET",
-      }
+    const respuesta = await axios.get(
+      "https://ucamp-api.onrender.com/api/v1/customers/643ab0727ff131d0b2870c63"
     );
     const json = await respuesta.json();
     console.log(json);
@@ -29,6 +26,21 @@ const obtenerCliente = async () => {
 
 const crearCliente = async () => {
   try {
+    const respuesta = await axios.post(
+      "https://ucamp-api.onrender.com/api/v1/customers",
+      {
+        firstName: "Dominic",
+        lastName: "Fuentes",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const datos = respuesta.data;
+    console.log(datos);
+    /*
     const respuesta = await fetch(
       "https://ucamp-api.onrender.com/api/v1/customers",
       {
@@ -43,7 +55,7 @@ const crearCliente = async () => {
       }
     );
     const json = await respuesta.json();
-
+*/
     console.log(json);
   } catch (error) {
     console.log(error);
@@ -52,7 +64,22 @@ const crearCliente = async () => {
 
 const actualizarCliente = async () => {
   try {
-    const respuesta = await fetch(
+    const respuesta = await axios.put(
+      "https://ucamp-api.onrender.com/api/v1/customers/643af3f3c61920fa698bbd29",
+      {
+        firstName: "Dom",
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-token": "643af3f3c61920fa698bbd29",
+        },
+      }
+    );
+    const datos = respuesta.data;
+    console.log(datos);
+
+    /*const respuesta = await fetch(
       "https://ucamp-api.onrender.com/api/v1/customers",
       {
         method: "PUT",
@@ -67,7 +94,7 @@ const actualizarCliente = async () => {
     );
     const json = await respuesta.json();
 
-    console.log(json);
+    console.log(json);*/
   } catch (error) {
     console.log(error);
   }
@@ -75,6 +102,7 @@ const actualizarCliente = async () => {
 
 const eliminarCliente = async () => {
   try {
+    /*
     const respuesta = await fetch(
       "https://ucamp-api.onrender.com/api/v1/customers",
       {
@@ -83,6 +111,7 @@ const eliminarCliente = async () => {
     );
     const json = await respuesta.json();
     console.log(json);
+    */
   } catch (error) {
     console.log(error);
   }
