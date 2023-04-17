@@ -1,0 +1,38 @@
+.body {
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  background-color: #a3bded;
+  background-repeat: no-repeat;
+  font-family: "Segoe UI";
+}
+
+.form {
+  max-width: 100px;
+  margin: auto;
+  flex-direction: row;
+}
+
+.form fieldset {
+  padding-top: 100px;
+}
+
+.main {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  background-image: linear-gradient(
+    to left,
+    rgba(29, 136, 163, 0.472),
+    rgba(26, 19, 116, 0.365)
+  );
+  color: azure;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 0.6em;
+
+  animation: mostrar 1.5s ease-in-out;
+}
