@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reto Semanal</title>
 
-    <link rel="stylesheet" href="./css/reto.css" />
+    <link rel="stylesheet" href="./css/reto11.css" />
   </head>
   <body class="body">
     <section class="main">
-      <form action="" method="POST" id="form">
+      <form action="" id="form">
         <fieldset>
           <legend>Reto Semanal 11</legend>
   
           <div class="form">
-            <label for="name">Nombre</label>
-            <input type="text" name="" id="firstname" />
+            <label for="firstName">Nombre</label>
+            <input type="text" name="" id="firstName" />
           </div>
   
           <div class="form">
             <label for="lastName">Apellido</label>
-            <input type="text" name="" id="lastname" />
+            <input type="text" name="" id="lastName" />
           </div>
   
           <div class="form">
@@ -31,18 +31,18 @@
    
           <div class="form">
             <label for="password">Password</label>
-            <input type="password" name="" id="password" />
+            <input type="password" name="" id="password"/>
           </div>
         </fieldset>
   
-        <button type="submit">Suscribirte</button>
-          <p class="warnings" id="warnings"></p>
+        <button type="submit" class="suscribir" onclick="llamarApisAsyncAwait()">Suscribirte</button>
+          
         </div>
       </form>
   
 
     </section>
     
-    <script src="./js/reto.js"></script>
+    <script src="./js/reto11.js"></script>
   </body>
 </html>
